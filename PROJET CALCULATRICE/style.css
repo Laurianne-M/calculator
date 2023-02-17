@@ -1,0 +1,228 @@
+
+body{
+    background: linear-gradient(#007991,#78ffd6);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    color:white;
+}
+
+.backstretch {
+    position: fixed;
+    top: 0px;
+    left:0px;
+    width: 100vw;
+    height: 100vh;
+    
+    overflow: hidden;
+    background: #1e5799; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #1e5799 0%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #1e5799 0%,#7db9e8 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #1e5799 0%,#7db9e8 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #1e5799 0%,#7db9e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
+  }
+    
+  .backstretch.animated {
+    -webkit-animation: filter-animation 8s infinite;
+    animation: filter-animation 8s infinite;
+  }
+  
+  @-webkit-keyframes filter-animation {
+    0% {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    
+    50% {
+      -webkit-filter: hue-rotate(100deg);
+    }
+    
+    100% {
+      -webkit-filter: hue-rotate(0deg);
+    }
+  }
+  
+  @keyframes filter-animation {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    
+    50% {
+      filter: hue-rotate(100deg);
+    }
+    
+    100% {
+      filter: hue-rotate(0deg);
+    }
+  }
+
+h1{
+    position: absolute;
+    top: 0%;
+    margin-left: -300px;
+    transition: 3s ease;
+    font-size: 2.5em;
+    color: #d9d9d9;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+   
+    
+}
+
+
+
+
+.calculator{
+    position: absolute;
+    top: 15%;
+    right: -400px;
+    background: linear-gradient(rgba(0,121,145, 1),rgba(120,255,214, 0));
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+    height: 600px;
+    width: 400px;
+    border-radius: 20px;
+    transition: 3s ease;
+}
+
+
+.userInput{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    width: 290px;
+    height: 90px;
+    margin: auto;
+    margin-top: 40px;
+    color: black;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-radius: 10px;
+    font-size: 3em;
+   
+}
+
+button{
+    font-size: 4em;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0,121,145, 0.3);
+    width:70px;
+    height: 70px; 
+    border-radius: 10px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+   border: none;
+    
+}
+
+.buttons:active{
+   
+    transform: translateY(2px);
+}
+
+#touches{
+    
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px;
+    gap:15px;
+    margin-top: 40px;
+    margin-left: 40px;
+    
+  
+}
+
+#getResult{
+grid-column: 5/4 ;
+grid-row: 4/5;
+height: 155px;
+}
+
+#zero{
+    grid-column: 1 / 4;
+    
+    width: 240px;
+}
+
+@media screen and (max-width:1200px) {
+
+
+    body{
+        overflow-x: scroll;
+
+    }
+    .calculator{
+    
+       top: 25%;
+       left: 25%;
+       transition: none;
+       width: 500px;
+       height: 700px;
+       
+    }
+
+    .userInput{
+    width: 350px;
+    height: 90px;
+    margin-top: 40px;
+    margin-bottom: 1px;
+    }
+    #touches{
+        margin-top: 10px;
+        position: relative;
+        top: 2%;
+       left: 2%;
+       grid-template-columns: 90px 90px 90px 90px;
+    grid-template-rows: 90px 90px 90px 90px 90px;
+    }
+
+    .buttons{
+        height: 90px;
+        width: 90px;
+    }
+
+    #getResult{
+        height: 190px;
+        }
+
+        #zero{
+            width: 300px;
+        }
+
+
+    h1{
+        text-align: center;
+        font-size: 4em;
+        top: 2%;
+        right: 30%;
+        transition: none;
+        visibility: hidden;
+
+    }
+
+    .backstretch{
+       
+        height: 110vh;
+        width: 110vw;
+        bottom: 0px;
+        right: 0px;
+        overflow-y: scroll;
+    }
+
+    
+}
